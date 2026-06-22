@@ -338,6 +338,11 @@ select:focus {
     line-height: 40px;
     cursor: pointer;
 }
+.active-page {
+    background-color: #ff523b;
+    color: white;
+    
+}
 
 .page-btn span:hover {
     background: #ff523b;
