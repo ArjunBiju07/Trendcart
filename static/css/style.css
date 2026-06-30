@@ -338,10 +338,11 @@ select:focus {
     line-height: 40px;
     cursor: pointer;
 }
+
 .active-page {
     background-color: #ff523b;
     color: white;
-    
+
 }
 
 .page-btn span:hover {
@@ -475,13 +476,21 @@ th:last-child {
 .form-container {
     background: #fff;
     width: 300px;
-    height: 400px;
+    height: 520px;
     position: relative;
     text-align: center;
     padding: 20px 0;
     margin: auto;
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
 }
 
 .form-container span {
