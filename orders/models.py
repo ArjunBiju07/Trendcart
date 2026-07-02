@@ -19,12 +19,19 @@ class Orders(models.Model):
         (ORDER_REJECTED,'ORDER_REJECTED')
     )
     order_status = models.IntegerField(choices=STATUS_CHOICE,default=CART_STAGE)
+    total_price = models.FloatField(default=0)
     owner = models.ForeignKey(Customer,on_delete=models.SET_NULL,related_name='orders',null = True)
     delete_status = models.IntegerField(choices=DELETE_CHOICE,default=LIVE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+       return f"order-{self.id}-{self.owner}"
+
 class OrderedItems(models.Model):
-    products = models.ForeignKey(Products,on_delete=models.SET_NULL,related_name='added_carts',null = True)
     quantity = models.IntegerField(default=1)
+    products = models.ForeignKey(Products,on_delete=models.SET_NULL,related_name='added_carts',null = True)
     owner = models.ForeignKey(Orders,on_delete=models.CASCADE,related_name="added_items")
+
+    def __str__(self):
+       return f"order id-{self.id}-{self.owner}"

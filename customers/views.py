@@ -1,4 +1,3 @@
-from django.contrib.admin import register
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
@@ -10,6 +9,7 @@ from django.contrib import messages
 def sign_out(request):
     logout(request)
     return redirect('index')
+    
 def show_account(request):
     context={}
     if request.POST and 'register' in request.POST:
@@ -34,7 +34,7 @@ def show_account(request):
                 phone = phone
                 
             )
-            success_msg = "User registered successfully"
+            success_msg = "User registered successfully.login now"
             messages.success(request,success_msg)
         except Exception as e:
             error_msg = "Username already exist or invalid input data"

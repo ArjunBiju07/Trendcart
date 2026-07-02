@@ -1,0 +1,36 @@
+{% load static %}
+{% load getstatus %}
+<div class="small-container cart-page">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Total Price</th>
+                <th>Order status</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% if orders %}
+            {% for order in orders %}
+            <tr>
+                <td>{{order.id}}</td>
+                <td>{{order.created_at}}</td>
+                <td>{{order.total_price}}</td>
+                <td>{% getstatus order.order_status %}</td>
+            </tr>
+            {% endfor %}
+                {% else %}
+            <tr>
+                <td colspan="4" style="text-align:center; color:red; padding:20px;">
+                    <h2>No orders yet</h2>
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    <center>
+    </center>
+
+</div>

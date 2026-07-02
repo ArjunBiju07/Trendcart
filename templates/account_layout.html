@@ -25,8 +25,8 @@
                     <p class="{{m.tags}}">{{m}}</p>
                     {% endfor %}
                     {% endif %}
-                    {% csrf_token %}
                     <form id="RegForm" method="post" enctype="multipart/form-data" onsubmit="return verify()">
+                        {% csrf_token %}
                         <input type="text" placeholder="Username" name="username" required maxlength="15" minlength="2"
                             autocomplete="off">
                         <input type="text" placeholder="Address" name="address" required minlength="5">
