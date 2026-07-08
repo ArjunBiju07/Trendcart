@@ -35,18 +35,18 @@ For Store Managers/Admin:
 
 Tech Stack
 
-Frontend: Django Template Language, HTML/CSS 
-Backend: Python, Django (MVT Architecture) 
-Database: PostgreSQL 
-Authentication: Django Session Management 
-State Management: Database-backed Sessions 
+-Frontend: Django Template Language, HTML/CSS 
+-Backend: Python, Django (MVT Architecture) 
+-Database: PostgreSQL 
+-Authentication: Django Session Management 
+-State Management: Database-backed Sessions 
 
 Architecture
 
 Django Apps:
 
-Products App: Manage product catalog and categories
-Customers App: Handle user profiles and accounts
-Orders App: Process orders and cart management
-Themes App: Dynamic frontend theming
+-Products App: Manage product catalog and categories
+-Customers App: Handle user profiles and accounts
+-Orders App: Process orders and cart management
+-Themes App: Dynamic frontend theming
 
