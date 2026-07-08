@@ -50,3 +50,4 @@ Django Apps:
 - Orders App: Process orders and cart management
 - Themes App: Dynamic frontend theming
 
+Developer: Arjun Biju
